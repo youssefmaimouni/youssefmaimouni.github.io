@@ -1,38 +1,36 @@
-source 'https://rubygems.org'
+name: Build and Deploy Jekyll
 
-gem 'jekyll'
+on:
+  push:
+    branches: [main]
+  pull_request:
 
-# Core plugins that directly affect site building
-group :jekyll_plugins do
-    gem 'jekyll-archives-v2'
-    gem 'jekyll-email-protect'
-    gem 'jekyll-feed'
-    gem 'jekyll-get-json'
-    gem 'jekyll-imagemagick'
-    gem 'jekyll-jupyter-notebook'
-    gem 'jekyll-link-attributes'
-    gem 'jekyll-minifier'
-    gem 'jekyll-paginate-v2'
-    gem 'jekyll-regex-replace'
-    gem 'jekyll-scholar'
-    gem 'jekyll-sitemap'
-    gem 'jekyll-tabs'
-    gem 'jekyll-terser', :git => "https://github.com/RobertoJBeltran/jekyll-terser.git"
-    gem 'jekyll-toc'
-    gem 'jekyll-twitter-plugin'
-    gem 'jemoji'
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
-    gem 'classifier-reborn'  # used for content categorization during the build
-end
+    steps:
+      - uses: actions/checkout@v3
 
-# Gems for development or external data fetching (outside :jekyll_plugins)
-group :other_plugins do
-    gem 'css_parser'
-    gem 'feedjira'
-    gem 'httparty'
-    gem 'observer'       # used by jekyll-scholar
-    gem 'ostruct'        # used by jekyll-twitter-plugin
-    # gem 'terser'         # used by jekyll-terser
-    # gem 'unicode_utils' -- should be already installed by jekyll
-    # gem 'webrick' -- should be already installed by jekyll
-end
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.2
+          bundler-cache: true
+
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle config set --local path 'vendor/bundle'       # install gems locally
+          bundle config set --local jobs 4                     # speed up installation
+          bundle install --jobs 4 --retry 3                    # retry on failure
+          bundle lock --update                                 # make sure Git gems are locked
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build --verbose
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v6
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
