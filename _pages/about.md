@@ -6,8 +6,8 @@ subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
 
 profile:
   align: right
-  image: prof_pic.jpg
-  image_circular: false
+  image: DSC_0726.JPG
+  image_circular: true
   more_info: >
     <p>Junior Data Scientist | AI, NLP, Computer Vision | PFE Internship in AI & Data</p>
     <p>Casablanca, Morocco 20220</p>
@@ -34,9 +34,8 @@ Passionate about innovation, I am looking for a **final-year internship (PFE) st
 
 # Connect with Me
 
-[LinkedIn](https://www.linkedin.com/in/your-linkedin)  
-[GitHub](https://github.com/your-github)  
-[Reddit](http://reddit.com/r/datascience)  
+[LinkedIn](https://www.linkedin.com/in/maimouni-youssef)  
+[GitHub](https://github.com/youssefmaimouni)  
 
 # Publications
 
