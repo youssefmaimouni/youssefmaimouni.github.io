@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, Download, ArrowRight, ChevronDown, MapPin, Phone, Calendar, Award, Users, Briefcase, GraduationCap, Brain, Database, Cloud, Code2, CheckCircle, ExternalLink, Shield, Newspaper, Droplets, Trophy, Home, Car, QrCode, Boxes, Medal, Send } from "lucide-react";
+import { Github, Linkedin, Mail, Download, ArrowRight, ChevronDown, MapPin, Phone, Calendar, Award, Users, Briefcase, GraduationCap, Brain, Database, Cloud, Code2, CheckCircle, ExternalLink, Shield, Newspaper, Droplets, Trophy, Home, QrCode, Boxes, Medal, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import profilePicture from "@/assets/profile-picture.jpg";
@@ -50,14 +50,14 @@ const Index = () => {
 
   // Projects data
   const featuredProjects = [
-    { title: language === "en" ? "Cloud Cybersecurity with AI" : "Cybersécurité Cloud avec IA", description: language === "en" ? "Implemented and compared multiple deep learning models (CNN-LSTM, Random Forest, MLP, XGBoost) for network intrusion detection." : "Implémentation et comparaison de modèles deep learning pour la détection d'intrusions réseau.", icon: Shield, tags: ["Python", "Azure", "AWS", "Deep Learning"], github: "https://github.com/youssefmaimouni" },
+    { title: language === "en" ? "Politixpert – Moroccan Political Expert System" : "Politixpert – Système Expert Politique Marocain", description: language === "en" ? "AI-based expert system using Moroccan political data from 6 official sources. End-to-end NLP preprocessing, multilingual embeddings with intfloat/multilingual-e5-large, FAISS semantic search, and RAG architecture with Qwen 1.5B." : "Système expert basé sur l'IA utilisant des données politiques marocaines de 6 sources officielles. Prétraitement NLP, embeddings multilingues, recherche sémantique FAISS et architecture RAG avec Qwen 1.5B.", icon: Brain, tags: ["NLP", "LLMs", "RAG", "FAISS", "Qwen"], github: "https://github.com/youssefmaimouni/politixpert" },
     { title: language === "en" ? "Arabic News Clustering (NLP)" : "Clustering d'Articles Arabes (NLP)", description: language === "en" ? "Processed 52,000+ Arabic articles. Hybrid vectorization (TF-IDF + BERT), K-Means clustering, mT5 summarization." : "Traitement de 52 000+ articles arabes. Vectorisation hybride, clustering K-Means, résumé mT5.", icon: Newspaper, tags: ["NLP", "BERT", "TF-IDF", "K-Means"], github: "https://github.com/youssefmaimouni" },
     { title: language === "en" ? "Smart Water Leak Detection" : "Détection Intelligente de Fuites d'Eau", description: language === "en" ? "1st Place Winner at DevJam Hackathon 2025. IoT + AI solution for real-time water leak detection." : "1ère Place au Hackathon DevJam 2025. Solution IoT + IA pour la détection de fuites d'eau.", icon: Droplets, tags: ["IoT", "Machine Learning", "Python"], badge: true, github: "https://github.com/youssefmaimouni/AquaFlow" },
   ];
 
   const otherProjects = [
     { title: language === "en" ? "Intelligent Shelf Product Detection" : "Détection Intelligente de Produits", icon: Boxes, tags: ["YOLOv8", "Detectron2", "ResNet-50"], github: "https://github.com/youssefmaimouni/SCINC" },
-    { title: language === "en" ? "Car & House Price Prediction" : "Prédiction de Prix", icon: Car, tags: ["TensorFlow", "Flask", "React"], github: "https://github.com/youssefmaimouni/houses_cars_prices_prediction" },
+    { title: language === "en" ? "Cloud Cybersecurity with AI" : "Cybersécurité Cloud avec IA", icon: Shield, tags: ["Python", "Azure", "AWS", "Deep Learning"], github: "https://github.com/youssefmaimouni" },
     { title: language === "en" ? "Exam Attendance System" : "Système de Présence", icon: QrCode, tags: ["React", "React Native", "Laravel"], github: "https://github.com/youssefmaimouni/fsac-pve" },
   ];
 
