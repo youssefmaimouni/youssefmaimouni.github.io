@@ -37,7 +37,7 @@ const Index = () => {
   // Skills data
   const skillCategories = [
     { title: t("skills.aiMl"), icon: Brain, color: "primary", skills: ["Python", "PyTorch", "TensorFlow", "Scikit-learn", "CNN", "LSTM", "Transformers", "XGBoost", "Deep Learning"] },
-    { title: t("skills.nlpLlms"), icon: Code2, color: "secondary", skills: ["BERT", "mT5", "TF-IDF", "Text Mining", "RAG", "K-Means", "LLMs", "Stable Diffusion"] },
+    { title: t("skills.nlpLlms"), icon: Code2, color: "secondary", skills: ["BERT", "mT5", "TF-IDF", "Text Mining", "RAG", "K-Means", "LLMs", "Stable Diffusion", "E5 Embeddings", "FAISS"] },
     { title: t("skills.computerVision"), icon: Brain, color: "primary", skills: ["YOLOv8", "Detectron2", "Mask R-CNN", "ResNet-50", "OpenCV", "Object Detection"] },
     { title: t("skills.dataBigData"), icon: Database, color: "secondary", skills: ["SQL", "MySQL", "MongoDB", "Pandas", "NumPy", "Power BI", "PCA", "t-SNE"] },
     { title: t("skills.webDev"), icon: Code2, color: "primary", skills: ["React.js", "TypeScript", "Laravel", "Flask", "FastAPI", "Tailwind CSS", "REST APIs"] },
