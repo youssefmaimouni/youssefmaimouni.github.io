@@ -132,16 +132,16 @@ const Index = () => {
       tags: ["YOLOv8", "Mask R-CNN", "ResNet-50", "Cloud"],
       github: "https://github.com/youssefmaimouni/SCINC",
     },
-    {
-      title: language === "en" ? "Arabic News Clustering (NLP)" : "Clustering d'Articles Arabes (NLP)",
-      description:
-        language === "en"
-          ? "Processed 52,000+ Arabic articles. Hybrid vectorization (TF-IDF + BERT), K-Means clustering, mT5 summarization."
-          : "Traitement de 52 000+ articles arabes. Vectorisation hybride, clustering K-Means, résumé mT5.",
-      icon: Newspaper,
-      tags: ["NLP", "BERT", "TF-IDF", "K-Means"],
-      github: "https://github.com/youssefmaimouni",
-    },
+    // {
+    //   title: language === "en" ? "Arabic News Clustering (NLP)" : "Clustering d'Articles Arabes (NLP)",
+    //   description:
+    //     language === "en"
+    //       ? "Processed 52,000+ Arabic articles. Hybrid vectorization (TF-IDF + BERT), K-Means clustering, mT5 summarization."
+    //       : "Traitement de 52 000+ articles arabes. Vectorisation hybride, clustering K-Means, résumé mT5.",
+    //   icon: Newspaper,
+    //   tags: ["NLP", "BERT", "TF-IDF", "K-Means"],
+    //   github: "https://github.com/youssefmaimouni",
+    // },
   ];
 
   const otherProjects = [
