@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, Download, ArrowRight, ChevronDown, MapPin, Phone, Calendar, Award, Users, Briefcase, GraduationCap, Brain, Database, Cloud, Code2, CheckCircle, ExternalLink, Shield, Newspaper, Droplets, Trophy, QrCode, Boxes, Medal, Send, Sparkles, Languages as LanguagesIcon, Globe } from "lucide-react";
+import { Github, Linkedin, Mail, Download, ArrowRight, ChevronDown, MapPin, Phone, Calendar, Award, Users, Briefcase, GraduationCap, Brain, Database, Cloud, Code2, CheckCircle, ExternalLink, Shield, Newspaper, Droplets, Trophy, QrCode, Boxes, Medal, Send, Sparkles, Languages as LanguagesIcon, Globe, Scale } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import profilePicture from "@/assets/profile-picture.jpg";
