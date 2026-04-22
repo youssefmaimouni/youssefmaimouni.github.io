@@ -125,6 +125,29 @@ const translations: Record<Language, Record<string, string>> = {
     "chatbot.welcome": "Hello! I'm Youssef's AI assistant. I can tell you about his skills, projects, experience, and how to get in touch. What would you like to know?",
     "chatbot.send": "Send",
     "chatbot.thinking": "Thinking...",
+
+    // Certifications
+    "certs.title": "Certifications &",
+    "certs.credentials": "Credentials",
+    "certs.subtitle": "Validated expertise across cloud, AI, data science, and engineering.",
+
+    // Volunteering
+    "volunteer.title": "Leadership &",
+    "volunteer.community": "Community",
+    "volunteer.subtitle": "Driving projects and people beyond code.",
+
+    // Languages
+    "languages.title": "Languages",
+    "languages.subtitle": "Communicating across cultures and contexts.",
+    "languages.arabic": "Arabic",
+    "languages.arabicLevel": "Native / Bilingual",
+    "languages.french": "French",
+    "languages.frenchLevel": "Professional Working Proficiency",
+    "languages.english": "English",
+    "languages.englishLevel": "Professional Working Proficiency",
+
+    // Contact extras
+    "contact.openCta": "Open to opportunities — let's connect",
   },
   fr: {
     // Navigation
