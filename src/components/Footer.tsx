@@ -14,9 +14,10 @@ const Footer = () => {
 
   const navLinks = [
     { label: t("nav.about"), section: "about" },
+    { label: t("nav.experience"), section: "experience" },
     { label: t("nav.skills"), section: "skills" },
     { label: t("nav.projects"), section: "projects" },
-    { label: t("nav.experience"), section: "experience" },
+    { label: t("nav.certifications"), section: "certifications" },
     { label: t("nav.contact"), section: "contact" },
   ];
 
