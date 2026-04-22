@@ -265,6 +265,29 @@ const translations: Record<Language, Record<string, string>> = {
     "chatbot.welcome": "Bonjour ! Je suis l'assistant IA de Youssef. Je peux vous parler de ses compétences, projets, expériences et comment le contacter. Que souhaitez-vous savoir ?",
     "chatbot.send": "Envoyer",
     "chatbot.thinking": "Réflexion...",
+
+    // Certifications
+    "certs.title": "Certifications &",
+    "certs.credentials": "Diplômes",
+    "certs.subtitle": "Expertise validée en cloud, IA, data science et ingénierie.",
+
+    // Volunteering
+    "volunteer.title": "Leadership &",
+    "volunteer.community": "Communauté",
+    "volunteer.subtitle": "Faire avancer les projets et les personnes au-delà du code.",
+
+    // Languages
+    "languages.title": "Langues",
+    "languages.subtitle": "Communiquer à travers cultures et contextes.",
+    "languages.arabic": "Arabe",
+    "languages.arabicLevel": "Natif / Bilingue",
+    "languages.french": "Français",
+    "languages.frenchLevel": "Compétence professionnelle",
+    "languages.english": "Anglais",
+    "languages.englishLevel": "Compétence professionnelle",
+
+    // Contact extras
+    "contact.openCta": "Ouvert aux opportunités — discutons",
   },
 };
 
