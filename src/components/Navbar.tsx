@@ -14,9 +14,10 @@ const Navbar = () => {
   const navItems = [
     { label: t("nav.home"), href: "#home" },
     { label: t("nav.about"), href: "#about" },
+    { label: t("nav.experience"), href: "#experience" },
     { label: t("nav.skills"), href: "#skills" },
     { label: t("nav.projects"), href: "#projects" },
-    { label: t("nav.experience"), href: "#experience" },
+    { label: t("nav.certifications"), href: "#certifications" },
     { label: t("nav.contact"), href: "#contact" },
   ];
 
