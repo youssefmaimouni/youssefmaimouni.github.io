@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, Download, ArrowRight, ChevronDown, MapPin, Phone, Calendar, Award, Users, Briefcase, GraduationCap, Brain, Database, Cloud, Code2, CheckCircle, ExternalLink, Shield, Newspaper, Droplets, Trophy, QrCode, Boxes, Medal, Send, Sparkles, Languages as LanguagesIcon, Globe } from "lucide-react";
+import { Github, Linkedin, Mail, Download, ArrowRight, ChevronDown, MapPin, Phone, Calendar, Award, Users, Briefcase, GraduationCap, Brain, Database, Cloud, Code2, CheckCircle, ExternalLink, Shield, Newspaper, Droplets, Trophy, QrCode, Boxes, Medal, Send, Sparkles, Languages as LanguagesIcon, Globe, Scale } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import profilePicture from "@/assets/profile-picture.jpg";
@@ -102,6 +102,17 @@ const Index = () => {
 
   // Projects data
   const featuredProjects: { title: string; description: string; icon: typeof Brain; tags: string[]; github: string; badge?: boolean }[] = [
+    {
+      title: language === "en" ? "Legal AI Platform – TechPal" : "Plateforme Juridique IA – TechPal",
+      description:
+        language === "en"
+          ? "Legal platform with automated document generation and an AI assistant grounded in Moroccan law and case law. RAG architecture with a hybrid pipeline (embeddings, relations, keywords), NER model, OCR for scanned documents, Qdrant for semantic search, Neo4j for relationship modeling, and a secure local deployment for sensitive data."
+          : "Plateforme juridique avec génération automatique de documents et assistant IA basé sur le droit marocain et la jurisprudence. Architecture RAG avec pipeline hybride (embeddings, relations, mots-clés), modèle NER, module OCR pour documents scannés, Qdrant pour la recherche sémantique, Neo4j pour la modélisation des relations et déploiement local sécurisé pour données sensibles.",
+      icon: Scale,
+      tags: ["RAG", "NER", "OCR", "Qdrant", "Neo4j", "LLMs"],
+      github: "https://www.linkedin.com/in/maimouni-youssef/",
+      badge: true,
+    },
     {
       title: language === "en" ? "Politixpert – Moroccan Political Expert System" : "Politixpert – Système Expert Politique Marocain",
       description:
