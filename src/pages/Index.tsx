@@ -111,7 +111,6 @@ const Index = () => {
       icon: Scale,
       tags: ["RAG", "NER", "OCR", "Qdrant", "Neo4j", "LLMs"],
       github: "https://www.linkedin.com/in/maimouni-youssef/",
-      badge: true,
     },
     {
       title: language === "en" ? "Politixpert – Moroccan Political Expert System" : "Politixpert – Système Expert Politique Marocain",
