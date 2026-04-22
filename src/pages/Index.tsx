@@ -110,7 +110,7 @@ const Index = () => {
           : "Plateforme juridique avec génération automatique de documents et assistant IA basé sur le droit marocain et la jurisprudence. Architecture RAG avec pipeline hybride (embeddings, relations, mots-clés), modèle NER, module OCR pour documents scannés, Qdrant pour la recherche sémantique, Neo4j pour la modélisation des relations et déploiement local sécurisé pour données sensibles.",
       icon: Scale,
       tags: ["RAG", "NER", "OCR", "Qdrant", "Neo4j", "LLMs"],
-      github: "https://www.linkedin.com/in/maimouni-youssef/",
+      // github: "https://www.linkedin.com/in/maimouni-youssef/",
     },
     {
       title: language === "en" ? "Politixpert – Moroccan Political Expert System" : "Politixpert – Système Expert Politique Marocain",
