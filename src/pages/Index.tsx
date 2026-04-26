@@ -101,7 +101,7 @@ const Index = () => {
       : ["Leadership", "Gestion d'équipe", "Gestion de projet", "Résolution de problèmes", "Communication", "Esprit critique"];
 
   // Projects data
-  const featuredProjects: { title: string; description: string; icon: typeof Brain; tags: string[]; github: string; badge?: boolean }[] = [
+  const featuredProjects: { title: string; description: string; icon: typeof Brain; tags: string[]; github?: string; badge?: boolean }[] = [
     {
       title: language === "en" ? "Legal AI Platform – TechPal" : "Plateforme Juridique IA – TechPal",
       description:

@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSwitcher from "./LanguageSwitcher";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -90,17 +91,19 @@ const Navbar = () => {
           ))}
         </nav>
 
-        {/* Right side: Language + CTA */}
-        <div className="hidden lg:flex items-center gap-4">
+        {/* Right side: Language + Theme + CTA */}
+        <div className="hidden lg:flex items-center gap-3">
           <LanguageSwitcher />
+          <ThemeToggle />
           <Button variant="gradient" size="sm" onClick={() => scrollToSection("#contact")}>
             {t("nav.getInTouch")}
           </Button>
         </div>
 
-        {/* Mobile: Language + Menu */}
-        <div className="flex lg:hidden items-center gap-3">
+        {/* Mobile: Language + Theme + Menu */}
+        <div className="flex lg:hidden items-center gap-2">
           <LanguageSwitcher />
+          <ThemeToggle />
           <button
             className="p-2 text-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
