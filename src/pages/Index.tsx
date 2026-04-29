@@ -348,32 +348,52 @@ const Index = () => {
               </motion.div>
             </div>
 
-            {/* Right: large profile photo */}
+            {/* Right: circular profile photo with orbital layout */}
             <motion.div variants={itemVariants} className="lg:col-span-5 relative">
-              <div className="relative aspect-[4/5] max-w-md mx-auto">
-                {/* Animated gradient ring */}
-                <div className="absolute -inset-2 rounded-3xl gradient-border opacity-80 blur-[2px]" />
+              <div className="relative aspect-square max-w-md mx-auto">
                 {/* Glow halos */}
-                <div className="absolute -top-8 -left-8 w-40 h-40 bg-primary/30 rounded-full blur-3xl" />
-                <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-secondary/30 rounded-full blur-3xl" />
+                <div className="absolute -top-8 -left-8 w-48 h-48 bg-primary/30 rounded-full blur-3xl" />
+                <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-secondary/30 rounded-full blur-3xl" />
 
-                <div className="relative w-full h-full rounded-3xl overflow-hidden border border-primary/30 glow-gradient">
+                {/* Outer rotating ring (dashed) */}
+                <motion.div
+                  className="absolute inset-0 rounded-full border border-dashed border-primary/30"
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+                >
+                  <span className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-primary glow-primary" />
+                  <span className="absolute top-1/2 -right-1.5 -translate-y-1/2 w-2 h-2 rounded-full bg-secondary glow-secondary" />
+                </motion.div>
+
+                {/* Middle rotating ring (reverse) */}
+                <motion.div
+                  className="absolute inset-6 rounded-full border border-secondary/20"
+                  animate={{ rotate: -360 }}
+                  transition={{ duration: 28, repeat: Infinity, ease: "linear" }}
+                >
+                  <span className="absolute top-1/2 -left-1 -translate-y-1/2 w-2 h-2 rounded-full bg-accent" />
+                  <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-primary" />
+                </motion.div>
+
+                {/* Animated gradient ring around photo */}
+                <div className="absolute inset-12 rounded-full gradient-border opacity-90" />
+
+                {/* Photo (circular) */}
+                <div className="absolute inset-[3.4rem] rounded-full overflow-hidden border-2 border-primary/40 glow-gradient">
                   <img
                     src={profilePicture}
                     alt="Youssef Maimouni"
                     className="w-full h-full object-cover object-top"
                   />
-                  {/* Subtle bottom gradient for depth */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent pointer-events-none" />
+                </div>
 
-                  {/* LIVE badge */}
-                  <div className="absolute top-4 right-4 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-background/70 backdrop-blur-md border border-green-500/40">
-                    <span className="relative flex h-2 w-2">
-                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
-                      <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
-                    </span>
-                    <span className="text-[10px] font-medium text-green-400 tracking-wider">LIVE</span>
-                  </div>
+                {/* LIVE badge floating on top */}
+                <div className="absolute top-4 right-4 z-10 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-background/70 backdrop-blur-md border border-green-500/40">
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
+                  </span>
+                  <span className="text-[10px] font-medium text-green-400 tracking-wider">LIVE</span>
                 </div>
               </div>
             </motion.div>
