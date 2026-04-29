@@ -397,7 +397,7 @@ const Index = () => {
       </section>
 
       {/* ============== ABOUT ============== */}
-      <section id="about" className="py-20 sm:py-28 relative">
+      <section id="about" className="py-20 sm:py-28 relative section-bg">
         <div className="container px-4 sm:px-6">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="max-w-3xl mb-12">
             <p className="text-primary text-sm font-medium tracking-widest uppercase mb-3">— {t("about.title")} {t("about.me")}</p>
@@ -448,7 +448,7 @@ const Index = () => {
       </section>
 
       {/* ============== EXPERIENCE ============== */}
-      <section id="experience" className="py-20 sm:py-28 relative overflow-hidden">
+      <section id="experience" className="py-20 sm:py-28 relative overflow-hidden section-bg">
         <div className="absolute inset-0 grid-pattern opacity-30" />
         <div className="container px-4 sm:px-6 relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="max-w-3xl mb-12 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
@@ -518,7 +518,7 @@ const Index = () => {
       </section>
 
       {/* ============== SKILLS ============== */}
-      <section id="skills" className="py-20 sm:py-28 relative overflow-hidden">
+      <section id="skills" className="py-20 sm:py-28 relative overflow-hidden section-bg">
         <div className="absolute inset-0 dot-pattern opacity-40" />
         <div className="container px-4 sm:px-6 relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="max-w-3xl mb-12">
@@ -553,7 +553,7 @@ const Index = () => {
       </section>
 
       {/* ============== PROJECTS ============== */}
-      <section id="projects" className="py-20 sm:py-28 relative overflow-hidden">
+      <section id="projects" className="py-20 sm:py-28 relative overflow-hidden section-bg">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] sm:w-[700px] h-[400px] sm:h-[700px] bg-gradient-radial from-primary/10 via-transparent to-transparent" />
         <div className="container px-4 sm:px-6 relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="max-w-3xl mb-12">
@@ -601,7 +601,7 @@ const Index = () => {
       </section>
 
       {/* ============== CERTIFICATIONS ============== */}
-      <section id="certifications" className="py-20 sm:py-28 relative">
+      <section id="certifications" className="py-20 sm:py-28 relative section-bg">
         <div className="container px-4 sm:px-6">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="max-w-3xl mb-12">
             <p className="text-primary text-sm font-medium tracking-widest uppercase mb-3">— {t("certs.title")} {t("certs.credentials")}</p>
@@ -637,7 +637,7 @@ const Index = () => {
       </section>
 
       {/* ============== VOLUNTEERING & LANGUAGES ============== */}
-      <section className="py-20 sm:py-28 relative overflow-hidden">
+      <section className="py-20 sm:py-28 relative overflow-hidden section-bg">
         <div className="absolute inset-0 grid-pattern opacity-20" />
         <div className="container px-4 sm:px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 max-w-7xl">
@@ -694,7 +694,7 @@ const Index = () => {
       </section>
 
       {/* ============== CONTACT ============== */}
-      <section id="contact" className="py-20 sm:py-28 relative overflow-hidden">
+      <section id="contact" className="py-20 sm:py-28 relative overflow-hidden section-bg">
         <div className="absolute inset-0 grid-pattern opacity-30" />
         <div className="container px-4 sm:px-6 relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="max-w-3xl mb-12">

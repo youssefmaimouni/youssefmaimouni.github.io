@@ -209,6 +209,34 @@
     background-size: 28px 28px;
   }
 
+  /* Simple subtle background for non-hero sections */
+  .section-bg {
+    position: relative;
+    isolation: isolate;
+  }
+  .section-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image:
+      radial-gradient(circle, hsl(var(--primary) / 0.10) 1px, transparent 1px);
+    background-size: 32px 32px;
+    mask-image: radial-gradient(ellipse at center, black 40%, transparent 85%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 85%);
+    pointer-events: none;
+  }
+  .section-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+      radial-gradient(ellipse at top left, hsl(var(--primary) / 0.06), transparent 55%),
+      radial-gradient(ellipse at bottom right, hsl(var(--secondary) / 0.06), transparent 55%);
+    pointer-events: none;
+  }
+
   .gradient-border {
     position: relative;
     background: hsl(var(--card));
