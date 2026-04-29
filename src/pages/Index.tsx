@@ -375,9 +375,6 @@ const Index = () => {
                   <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-primary" />
                 </motion.div>
 
-                {/* Animated gradient ring around photo */}
-                <div className="absolute inset-12 rounded-full gradient-border opacity-90" />
-
                 {/* Photo (circular) */}
                 <div className="absolute inset-[3.4rem] rounded-full overflow-hidden border-2 border-primary/40 glow-gradient">
                   <img
@@ -385,15 +382,6 @@ const Index = () => {
                     alt="Youssef Maimouni"
                     className="w-full h-full object-cover object-top"
                   />
-                </div>
-
-                {/* LIVE badge floating on top */}
-                <div className="absolute top-4 right-4 z-10 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-background/70 backdrop-blur-md border border-green-500/40">
-                  <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
-                  </span>
-                  <span className="text-[10px] font-medium text-green-400 tracking-wider">LIVE</span>
                 </div>
               </div>
             </motion.div>
