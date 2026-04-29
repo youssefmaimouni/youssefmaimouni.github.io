@@ -6,6 +6,8 @@ import profilePicture from "@/assets/profile-picture.jpg";
 import { useState, useMemo } from "react";
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import NeuralNetworkCanvas from "@/components/NeuralNetworkCanvas";
+import Typewriter from "@/components/Typewriter";
 
 // Certifications (full list, newest first)
 const certifications = [
@@ -261,9 +263,11 @@ const Index = () => {
       {/* ============== HERO ============== */}
       <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-24 pb-12">
         {/* Background layers */}
-        <div className="absolute inset-0 grid-pattern opacity-60" />
-        <div className="absolute top-1/4 -left-20 w-72 md:w-[28rem] h-72 md:h-[28rem] bg-primary/20 rounded-full blur-[120px]" />
-        <div className="absolute bottom-1/4 -right-20 w-72 md:w-[28rem] h-72 md:h-[28rem] bg-secondary/20 rounded-full blur-[120px]" />
+        <div className="absolute inset-0 dot-pattern opacity-40" />
+        <div className="absolute inset-0 grid-pattern opacity-30" />
+        <NeuralNetworkCanvas className="opacity-70" />
+        <div className="absolute top-1/4 -left-20 w-72 md:w-[28rem] h-72 md:h-[28rem] bg-primary/25 rounded-full blur-[120px]" />
+        <div className="absolute bottom-1/4 -right-20 w-72 md:w-[28rem] h-72 md:h-[28rem] bg-secondary/25 rounded-full blur-[120px]" />
 
         {/* Animated particles (hero only) */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -305,8 +309,8 @@ const Index = () => {
                 <span className="gradient-text block">Maimouni</span>
               </motion.h1>
 
-              <motion.p variants={itemVariants} className="text-lg sm:text-xl text-foreground/90 font-medium mb-2">
-                {t("home.role")}
+              <motion.p variants={itemVariants} className="text-lg sm:text-xl text-foreground/90 font-medium mb-2 min-h-[1.75rem]">
+                <Typewriter text={t("home.role")} speed={45} startDelay={600} />
               </motion.p>
 
               <motion.p variants={itemVariants} className="text-base sm:text-lg text-muted-foreground mb-3">
