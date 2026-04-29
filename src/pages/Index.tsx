@@ -348,52 +348,31 @@ const Index = () => {
               </motion.div>
             </div>
 
-            {/* Right: floating skill cloud / stats panel */}
+            {/* Right: large profile photo */}
             <motion.div variants={itemVariants} className="lg:col-span-5 relative">
-              <div className="relative aspect-square max-w-md mx-auto">
+              <div className="relative aspect-[4/5] max-w-md mx-auto">
                 {/* Animated gradient ring */}
-                <div className="absolute inset-0 rounded-3xl gradient-border opacity-80" />
-                <div className="absolute inset-[2px] rounded-3xl bg-card/70 backdrop-blur-2xl p-6 sm:p-8 flex flex-col">
-                  {/* Profile chip */}
-                  <div className="flex items-center gap-3 mb-5">
-                    <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-primary/50 glow-primary shrink-0">
-                      <img src={profilePicture} alt="Youssef Maimouni" className="w-full h-full object-cover object-top" />
-                    </div>
-                    <div className="min-w-0">
-                      <p className="font-display font-semibold text-sm truncate">Youssef Maimouni</p>
-                      <p className="text-xs text-primary truncate">AI Engineer</p>
-                    </div>
-                    <div className="ml-auto flex items-center gap-1.5 px-2 py-1 rounded-full bg-green-500/10 border border-green-500/30">
-                      <span className="relative flex h-2 w-2">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
-                      </span>
-                      <span className="text-[10px] font-medium text-green-400">LIVE</span>
-                    </div>
-                  </div>
+                <div className="absolute -inset-2 rounded-3xl gradient-border opacity-80 blur-[2px]" />
+                {/* Glow halos */}
+                <div className="absolute -top-8 -left-8 w-40 h-40 bg-primary/30 rounded-full blur-3xl" />
+                <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-secondary/30 rounded-full blur-3xl" />
 
-                  <div className="text-xs uppercase tracking-wider text-muted-foreground mb-3 font-medium">Tech Stack</div>
-                  <div className="flex flex-wrap gap-2 mb-5">
-                    {skillCloud.map((s, i) => (
-                      <motion.span
-                        key={s}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: 0.5 + i * 0.05 }}
-                        className="skill-tag px-2.5 py-1 rounded-md text-xs font-medium bg-primary/5 border border-primary/20 text-foreground/90"
-                      >
-                        {s}
-                      </motion.span>
-                    ))}
-                  </div>
+                <div className="relative w-full h-full rounded-3xl overflow-hidden border border-primary/30 glow-gradient">
+                  <img
+                    src={profilePicture}
+                    alt="Youssef Maimouni"
+                    className="w-full h-full object-cover object-top"
+                  />
+                  {/* Subtle bottom gradient for depth */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent pointer-events-none" />
 
-                  <div className="mt-auto grid grid-cols-2 gap-3 pt-4 border-t border-border/50">
-                    {stats.slice(0, 4).map((s) => (
-                      <div key={s.label} className="text-center">
-                        <p className="font-display text-xl font-bold gradient-text">{s.value}</p>
-                        <p className="text-[10px] text-muted-foreground leading-tight">{s.label}</p>
-                      </div>
-                    ))}
+                  {/* LIVE badge */}
+                  <div className="absolute top-4 right-4 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-background/70 backdrop-blur-md border border-green-500/40">
+                    <span className="relative flex h-2 w-2">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
+                    </span>
+                    <span className="text-[10px] font-medium text-green-400 tracking-wider">LIVE</span>
                   </div>
                 </div>
               </div>
